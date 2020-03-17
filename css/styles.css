@@ -3,65 +3,89 @@
 	padding: 0;
 }
 
-html, body {
-	background-color: lightblue;
-	font-family:  sans-serif;
+:root {
+	--nav-bar-height: 5vh;
+	--color-primary:   black;
+	--color-secondary: lightblue;
+	--color-tertiary:  red;
 }
 
 
+html, body {
+	background-color: var(--color-secondary);
+	font-family:  sans-serif;
+	overflow: auto;
+}
 
-.header-bar {
+#navbar {
+	overflow: hidden;
+}
 
+.navbar {
+
+	overflow: hidden;
 	width: 100%; 
-	height: 22px;
+	height: var(--nav-bar-height);
 
 	text-align: right;
-	background-color: black;
+	background-color: var(--color-primary);
 	position: fixed; 
 	z-index: 1499; 
 	
 	list-style-type: none; /* gets rid of bullet points */
-	display: inline;
+	
 }
 
-.header-bar li:first-child { 
-	float: left; 
-	font-family: Courier;
-	font-weight: bold;
-	font-size: 20px;
-	letter-spacing: 2px;
-}
-
-.header-bar-button {
+.navbar-button {
+	float: right;
 	text-align: right;
-	display: inline; 		/* horizontal list */
-	padding:  2%;  	/* 100% / (2 * buttons + front + end) */
+	display: inline-block; 	/* horizontal list */
+	padding-left:  1%;  /* 100% / (2 * buttons + front + end) */
+	padding-right: 15px;
 	color: white;
-	font-size: 20px;
-
+	font-family: 'Montserrat', sans-serif;
+	font-size: calc(var(--nav-bar-height) - 1vh);
 }
 
-.text {
-	padding-top: 5%;
-}
-
-.name {
-	display: inline
-	font: Impact;
-	color: white;
-	text-align: left;
-}
-
-.header-bar-button a, .header-bar-button a:visited {
+.navbar-button a, .navbar-button a:visited {
 	text-decoration: none;
 	color: white;
 }
 
-.header-bar-button a:hover {
-	color: orange;
+.navbar-button a:hover {
+	color: var(--color-tertiary);
 }
 
+.navbar li:first-child {
+
+	display: inline-block;
+	color: var(--color-tertiary);
+	text-align: left;
+
+	padding-left: 10px;
+	float: left;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: lighter;
+	font-size: calc(var(--nav-bar-height) - 1vh);
+	letter-spacing: 2px;
+	
+}
+
+/* ////////////////////// */
+
+#content {
+	padding-top: var(--nav-bar-height);
+	overflow: auto;
+}
+
+.text {
+	font-size: 40px;
+}
+
+
+
 #music {
+
 }
 
 .music-1 {
@@ -70,6 +94,24 @@ html, body {
 }
 
 .soundcloud-embed {
-	width:  40%;
 	float: right;
+	width:  40%;
+}
+
+
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+  height: calc(100vh - var(--nav-bar-height));
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+ 
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--color-tertiary);
+  border-radius: 15pt;
 }
