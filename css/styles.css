@@ -1,3 +1,75 @@
-body {
-	background-color: red;
+* {  /* reset all margins/padding */
+	margin:  0;
+	padding: 0;
+}
+
+html, body {
+	background-color: lightblue;
+	font-family:  sans-serif;
+}
+
+
+
+.header-bar {
+
+	width: 100%; 
+	height: 22px;
+
+	text-align: right;
+	background-color: black;
+	position: fixed; 
+	z-index: 1499; 
+	
+	list-style-type: none; /* gets rid of bullet points */
+	display: inline;
+}
+
+.header-bar li:first-child { 
+	float: left; 
+	font-family: Courier;
+	font-weight: bold;
+	font-size: 20px;
+	letter-spacing: 2px;
+}
+
+.header-bar-button {
+	text-align: right;
+	display: inline; 		/* horizontal list */
+	padding:  2%;  	/* 100% / (2 * buttons + front + end) */
+	color: white;
+	font-size: 20px;
+
+}
+
+.text {
+	padding-top: 5%;
+}
+
+.name {
+	display: inline
+	font: Impact;
+	color: white;
+	text-align: left;
+}
+
+.header-bar-button a, .header-bar-button a:visited {
+	text-decoration: none;
+	color: white;
+}
+
+.header-bar-button a:hover {
+	color: orange;
+}
+
+#music {
+}
+
+.music-1 {
+	width: 60%;
+	float: left;
+}
+
+.soundcloud-embed {
+	width:  40%;
+	float: right;
 }
