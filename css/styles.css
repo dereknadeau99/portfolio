@@ -76,16 +76,7 @@ html, body {
 #content {
 	padding-top: var(--nav-bar-height);
 	overflow: auto;
-}
-
-.text {
-	font-size: 40px;
-}
-
-
-
-#music {
-
+	font-size: 1em;
 }
 
 .music-1 {
@@ -98,6 +89,31 @@ html, body {
 	width:  40%;
 }
 
+
+#img_headshot {
+	width: 40%;
+	float: right;
+}
+
+#img_hackathon {
+	width: 30%;
+	float: left;
+}
+
+#hello {
+	font-size: 3em;
+	padding-top: 20%;
+	padding-bottom: 20%;
+	text-align: center;
+}
+
+#about_me {
+	box-sizing: border-box;
+}
+
+#red_name {
+	color: var(--color-tertiary);
+}
 
 /* width */
 ::-webkit-scrollbar {
@@ -114,4 +130,9 @@ html, body {
 ::-webkit-scrollbar-thumb {
   background: var(--color-tertiary);
   border-radius: 15pt;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+
 }
